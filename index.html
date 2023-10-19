@@ -1332,6 +1332,20 @@
             </path>
         </symbol>
     </svg>
+    <audio hidden autoplay loop id="audio-player">
+        <source src="./assets/music/CHVRCHES-Never-Say-Die-_Audio_.mp3" type="audio/mpeg">
+        <track label="Title" kind="title">Never Say Die</track>
+        <track label="Artist" kind="artist">CHVRCHES</track>
+    </audio>
+    <script>
+        const audioPlayer = document.getElementById("audio-player");
+        audioPlayer.play();
+    
+        window.onbeforeunload = () => {
+            audioPlayer.pause();
+        };
+    </script>
+    </audio>
     <div id="wrapper">
         <div id="main">
             <div class="inner">
@@ -1360,10 +1374,6 @@
                                 </svg><span class="label">Continue</span></a></li>
                     </ul>
                 </section>
-                <footer id="footer">
-                    <div id="credits" class="icc-credits"><span><a href="https://carrd.co/build?ref=auto">Made with
-                                Carrd</a></span></div>
-                </footer>
             </div>
         </div>
     </div>
